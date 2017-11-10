@@ -1,0 +1,21 @@
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+
+@Component({
+  selector: 'app-cat-list',
+  templateUrl: './cat-list.component.html',
+  styleUrls: ['./cat-list.component.css'],
+  encapsulation: ViewEncapsulation.None
+})
+export class CatListComponent implements OnInit {
+  cats = [
+    'Monty',
+    'Blanco',
+    'Arthur',
+    'Fatso'
+  ];
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
