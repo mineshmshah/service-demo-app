@@ -7,12 +7,14 @@ import { CatService } from '../cat/cat.service';
   styleUrls: ['./cat-list.component.css'],
 })
 export class CatListComponent implements OnInit {
-cats;
-  constructor( catService: CatService ) {
-    this.cats = catService.get();
-    debugger;
-  }
+  cats;
+  constructor( private catService: CatService ) {}
   ngOnInit() {
+    this.cats = this.catService.get();
   }
+  handleNewCat(catName) {
+    this.cats.push(catName);
+    this.cats = this.catService.get();
+  };
 
 }

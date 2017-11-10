@@ -11,7 +11,8 @@ export class CatService {
   ];
 
   get() {
-    return this.cats;
+    // this returns a copy of the cats
+    return [...this.cats];
   }
 
 
