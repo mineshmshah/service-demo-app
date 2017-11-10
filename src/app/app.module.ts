@@ -15,6 +15,7 @@ import { CatService } from './cat/cat.service';
   imports: [
     BrowserModule
   ],
+  // provide service to the app
   providers: [ CatService ],
   bootstrap: [ AppComponent ]
 })

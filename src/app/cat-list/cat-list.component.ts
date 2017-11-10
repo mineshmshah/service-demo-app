@@ -1,15 +1,17 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CatService } from '../cat/cat.service';
 
 @Component({
   selector: 'app-cat-list',
   templateUrl: './cat-list.component.html',
   styleUrls: ['./cat-list.component.css'],
-  encapsulation: ViewEncapsulation.None
 })
 export class CatListComponent implements OnInit {
-
-  constructor() { }
-
+cats;
+  constructor( catService: CatService ) {
+    this.cats = catService.get();
+    debugger;
+  }
   ngOnInit() {
   }
 
