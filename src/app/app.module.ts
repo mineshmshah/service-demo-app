@@ -1,10 +1,11 @@
+// core things here
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+// own imports here
 import { AppComponent } from './app.component';
 import { CatListComponent } from './cat-list/cat-list.component';
-
+import { CatService } from './cat/cat.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { CatListComponent } from './cat-list/cat-list.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ CatService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
