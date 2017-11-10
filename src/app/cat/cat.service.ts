@@ -12,6 +12,7 @@ export class CatService {
 
   get() {
     // this returns a copy of the cats rather than a reference to cats
+    // This is an immutable function
     return [...this.cats];
   }
   // we need to define a push method as the class doesn't have a push method
