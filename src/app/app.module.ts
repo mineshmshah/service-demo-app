@@ -6,11 +6,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CatListComponent } from './cat-list/cat-list.component';
 import { CatService } from './cat/cat.service';
+import { SearchComponent } from './search/search.component';
+import { CatFilterComponent } from './cat-filter/cat-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CatListComponent
+    CatListComponent,
+    SearchComponent,
+    CatFilterComponent
   ],
   imports: [
     BrowserModule

@@ -22,6 +22,14 @@ export class CatService {
     this.cats.push(cat);
   }
 
+  filter(searchTerm) {
+    searchTerm = searchTerm.toLowerCase();
+    // filter returns a cop of the array.
+    return this.cats.filter((cat) => {
+      return cat.toLowerCase().includes(searchTerm);
+    });
+  }
+
 
 
 }
