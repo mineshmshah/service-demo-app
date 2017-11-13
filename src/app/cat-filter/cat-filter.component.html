@@ -1,0 +1,9 @@
+<p>Cat search</p>
+
+<input (input)="newCatName=$event.target.value" />
+<button (click)="filterCat(newCatName)">Search Cat:{{newCatName}}</button>
+<ul>
+  <li *ngFor="let cat of cats">
+    {{cat}}
+  </li>
+</ul>
